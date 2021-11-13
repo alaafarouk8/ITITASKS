@@ -1,0 +1,15 @@
+answers
+______________________________________________________________________________________
+N.5 g.1
+yes, there is a difference.
+______________________________________________________________________________________
+N6. 
+when i use !Important rule , it overrides ALL styling rules for that specific property on this element and 
+color red has important more than yellow. 
+
+_______________________________________________________________________________________
+Bonus Answers:
+1-
+Calculate Specificity for N.6 
+for number on style = 1 + 1 + 100 + 10 + 100= 212 
+for number = 101

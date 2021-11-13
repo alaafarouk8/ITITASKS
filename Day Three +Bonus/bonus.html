@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .dropbutton {
+            background-color: rgb(147, 208, 236);
+            color: darkblue;
+            padding: 10px;
+            font-size: 16px;
+            border: darkblue 5px;
+            width: 100px;
+            height: 50px;
+        }
+        .dropbutton-child{
+            background-color: rgb(147, 208, 236);
+            color: darkblue;
+            padding: 10px;
+            font-size: 16px;
+            border: darkblue 5px;
+            width: 100px;
+            height: 50px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(177, 229, 253);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+        .dropdown-content-child {
+            display: none;
+            position: absolute;
+            background-color: rgb(177, 229, 253);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown-content a {
+            color: darkblue;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content-child a {
+            color: darkblue;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #248fb9;
+
+        }
+
+        .dropdown-content-child a:hover {
+            background-color: #248fb9;
+
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-child:hover .dropdown-content-child {
+            display: block;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-child {
+            position: relative;
+            display: inline-block;
+        }
+
+      
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align: center; color:darkblue;">Drop Down List</h1>
+
+    <ul class="dropdown">
+        <button class="dropbutton">menu item</button>
+        <div class="dropdown-content">
+            <ul>
+                <a href="#">menu item </a>
+                <a href="#">menu item</a>
+
+                <ul class="dropdown-child">
+                    <button class="dropbutton-child">menu item</button>
+                    <div class="dropdown-content-child">
+                        <ul>
+                            <a href="#">menu item </a>
+                            <a href="#">menu item</a>
+                            <a href="#">menu item</a>
+                        </ul>
+                    </div>
+                </ul>
+
+
+            </ul>
+
+        </div>
+    </ul>
+
+</body>
+
+</html>

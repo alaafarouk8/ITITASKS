@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title> Contact Me </title>
+
+</head>
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th,
+    td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #c6e2e1;
+    }
+    tr:nth-child(odd) {
+        background-color: #e9dae6;
+    }
+    tr:hover {background-color: #ae87b6;}
+
+</style>
+
+<body >
+    <form action="../media/Thankyou.html">
+        <table width="100%" style="height: 100%; " cellpadding="10" cellspacing="0" border="5" id="a">
+            <tr>
+                <th colspan="2"> <center>Contact Me</center></th>
+            </tr>
+            <tr>
+                <td>Your Name: </td>
+                <td>
+                    <input type="text" id="fname" name="fname" placeholder="Enter Your Name">
+                </td>
+            </tr>
+            <tr>
+
+                <td>Your opinion on the website:</td>
+                <td>
+                    <input type="radio" id="VeryGood" name="opinion" value="VeryGood" required>
+                    <label for="VeryGood">Very Good</label> <br>
+                    <input type="radio" id="Good" name="opinion" value="Good" required>
+                    <label for="Good">Good</label> <br>
+                    <input type="radio" id="Fair" name="opinion" value="Fair" required>
+                    <label for="Fair">Fair</label> <br>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" id="Female" name="Gender" value="Female" required>
+                    <label for="Female">Female</label> <br>
+                    <input type="radio" id="Male" name="Gender" value="Male" required>
+                    <label for="Male">Male</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Marital status: </td>
+                <td>
+                    <select name="Maritalstatus" id="Maritalstatus" requied>
+                        <option value="Single">Single</option>
+                        <option value="Married">Married</option>
+                        <option value="Other" selected>Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+
+                <td>You know about my website from:</td>
+                <td>
+                    <select name="website" id="website" multiple required>
+                        <option value="Internet">Internet</option>
+                        <option value="Friend">Friend</option>
+                        <option value="Search Engine">Search Engine</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Your Email:</td>
+                <td>
+                    <input type="text" id="email" name="email" required placeholder="Enter Your Email">
+                </td>
+            </tr>
+            <tr>
+                <td>Subject:</td>
+                <td><input type="text" id="Subject" name="Subject" required placeholder="Enter Subject"> </td>
+            </tr>
+            <tr>
+                <td>Message:</td>
+                <td>
+                    <textarea cols="40" rows="5" id="Message" name="Message"> Enter Your Comment Please:  </textarea>
+                </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+
+                    <button input type="submit" value="submit!"> Submit </button>
+                    <button input type="RESET" value="CLEAR!"> CLEAR </button>
+                </td>
+                    
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> CSS magic</title>
+	<link rel="stylesheet" href="Style.css">
+</head>
+<style>
+    body {
+		max-height: 100%;
+	}
+    .none-bullet-list {
+		list-style-type: none;
+	}
+	li a {
+		color: red;
+		background-color: pink;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: pink;
+		background-color: red;
+	}
+
+	#aboutus {
+
+		font-weight: bold;
+		font-size: 12px;
+
+	}
+    
+	#loginform {
+		border-style: dashed;
+		border-color:  rgb(20, 70, 60) ;
+		border-width: 2px;
+	}
+
+	input[type="text"] {
+		background-color: yellow;
+	}
+
+	input:focus {
+		background-color: white;
+	}
+	#aboutus{
+		color: red !important;
+
+	}
+	span[id="content"] > p{
+	 color: yellow;
+
+
+	}
+
+	p.tableb-bordered{
+	   display:inline-table;
+	   padding: 5px;
+	   display: table-cell;
+	   border: solid black;
+	}
+</style>
+
+<body style="height: 100%;">
+	<div id="header" style="height: 30%; background-color: red; width: 100%; display:inline-block;">
+		<h1>This is the page header</h1>
+	</div>
+	<span id="linksbar" style="width:25%; height:70% ; background-color: gray; float: left; display: block;">
+		<div id="loginform">
+			User name: <input type="text" />
+			</br>
+			Password: <input type="password" />
+			<br />
+			<input type="checkbox" /> remember me
+			<br />
+			<button>login</button>
+		</div>
+		<h2> site menu</h2>
+		<ul class="none-bullet-list">
+			<li><a href="#">link1</a></li>
+			<li><a href="#">link2</a></li>
+			<li><a href="#">link3</a></li>
+			<li><a href="#">link4</a></li>
+			<li><a href="#">link5</a></li>
+		</ul>
+	</span>
+	<span id="content" style="width: 75%;height: 70%; background-color: pink; float: left; display: inline-block;">
+		<h2> about us</h2>
+		<p id="aboutus">
+			This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is
+			a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a
+			paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a
+			paragraph This is a paragraph.
+		</p>
+		<div id="titles">
+			<p class="tableb-bordered"> title1</p>
+			<p class="tableb-bordered"> title2</p>
+			<p class="tableb-bordered"> title3</p>
+		</div>
+
+	</span>
+
+</body>
+
+</html>
