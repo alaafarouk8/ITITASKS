@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me</title>
+</head>
+
+<body>
+
+    <script>
+        var username, age;
+        var birthYear;
+        var checked = true;
+        username = prompt("Enter Your Name Please :");
+        while (isNaN(username)==false)
+        {
+            username = prompt("Enter Your Name Please :");
+        }
+        while (username==null)
+        {
+            username = prompt("Enter Your Name Please :");
+        }
+        birthYear = prompt("Enter Your Birth Year Please :") ; 
+        while (birthYear=="")
+        {
+            birthYear = prompt("Enter Your Birth Year Please :");
+        }
+        while(isFinite(birthYear)==false)
+        {
+            birthYear = prompt("Enter Your Birth Year Please :") ; 
+        }
+        while(birthYear>2010)
+        {
+            birthYear = prompt("Enter Your Birth Year Please :") ; 
+        }
+        document.write("<b>Your Name is </b> " + username , "<br>   <hr>") ;
+        document.write("<b>Your birth Year is </b>" + birthYear , "<br>   <hr>") ;
+        document.write("<b>Your Age is </b>" + (2021-birthYear) , "<br>   <hr>") ;
+
+
+    </script>
+
+</body>
+
+</html>
