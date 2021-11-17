@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title> Home Page </title>
+    <style>
+        .button {
+            background-color: #eeeeee;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: white;
+            color: rgb(42, 189, 194);
+            border: 2px solid rgb(99, 203, 211);
+        }
+
+        .button1:hover {
+            background-color: rgb(99, 203, 211);
+            color: white;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('16-bit-wallpaper-1.jpg');background-repeat: no-repeat ; text-align: center;">
+    <hr>
+    <hr>
+    <input type="text" onkeypress="myFunction(event)" id="onpressId" onfocus="this.value=''"
+        style=" height: 20px; width: 300px; text-align:center">
+    <hr>
+    <hr>
+    <button class="button button1" onclick="openClock()" style="text-align:center">
+        <h2>Start Clock</h2>
+    </button>
+    <br>
+    <input type="text" id="p" style=" height: 20px; width: 300px;text-align:center">
+    <hr>
+    <hr>
+    <button class="button button1" onclick="window_Time()" style="text-align:center">
+        <h2>Open a new Window</h2>
+    </button>
+    <button class="button button1" onclick="closeWindow()" style="text-align:center">
+        <h2>Close the Window</h2>
+    </button>
+    <hr>
+    <hr>
+    <img onmouseover="changePic1()" onmouseout="changePic2()" id="pic" src="smileface.png" onclick="butClick()">
+    <hr>
+    <hr>
+    <form id="login-form" method="post">
+        <fieldset>
+            <legend>Login Form</legend>
+            <input id="userName" type="text" placeholder="Enter Username" required />
+            <br>
+            <input id="userPw" type="password" placeholder="Enter Password" required />
+            <br>
+            <input type="submit" value="Login" onclick="loginForm()"/>
+        </fieldset>
+    </form>
+    <hr>
+    <hr>
+    <br>
+
+    <hr>
+    <hr>
+
+
+</body>
+
+</html>
