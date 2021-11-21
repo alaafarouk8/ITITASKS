@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sign Up </title>
+    <style>
+        .button {
+            background-color: #eeeeee;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: white;
+            color: rgb(143, 25, 143);
+            border: 2px solid rgb(143, 25, 143);
+        }
+
+        .button1:hover {
+            background-color: rgb(143, 25, 143);
+            color: white;
+        }
+
+        .form-box {
+            width: 40%;
+            height: 100%;
+            margin-top: 100px;
+            background-color: white;
+            border-radius: 20px;
+            display: inline-block;
+            border: none;
+            background-color: rgb(143, 25, 143);
+            /*    background-image: url('backgroundForm.jpg'); */
+
+        }
+
+        .color {
+            color: white;
+            font-size: larger;
+            font-style: initial;
+
+        }
+
+        .colorError {
+            font-size: small;
+            border: 5px;
+            background-color: white;
+            color: rgb(143, 25, 143);
+            ;
+
+
+        }
+    </style>
+</head>
+
+<body style="background-image: url('background.jpg');background-repeat: no-repeat ; text-align: center;">
+    <form class="form-box" onsubmit="buttonSubmit(event)">
+        <fieldset>
+            <legend style="font-style:initial; font-size: larger; border: none; color: white;">Sign Up</legend>
+            <label for="fname" class="color">Full Name</label>
+            <input type="text" id="fname" name="fullname" placeholder="Enter Your Name Please" style="width: 250px;"
+                aria-required="true" minlength="3" aria-describedby="name-format">
+            <span id="invalidName" class="color colorError "></span>
+            <br>
+            <br>
+            <label for="email" class="color">Email</label>
+            <input type="email" id="email" name="userEmail" placeholder="Enter Your Email Please" style="width: 250px;"
+                required>
+            <br>
+            <br>
+            <label for="country" class="color">City</label>
+            <select id="country" name="country" style="width: 250px;">
+                <option value="Egypt">Egypt</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+                <option value="india">India</option>
+                <option value="russia">Russia</option>
+                <option value="mexico">Mexico</option>
+                <option value="Japan">Japan</option>
+                <option value="Philippines">Philippines</option>
+                <option value="DR Congo">DR Congo</option>
+
+            </select>
+            <br>
+            <br>
+            <label for="pass" class="color">Password</label>
+            <input type="password" id="pass" name="userPass" placeholder="Enter Your Password Please"
+                style="width: 250px;" required>
+            <br>
+            <br>
+            <label for="ConfirmPass" class="color">Confirm Password</label>
+            <input type="password" id="ConfirmPass" placeholder="Confirm Your Password Please" style="width: 250px;"
+                onblur="CheckPass()" required>
+            <br>
+            <span id="invalidPass" class="color colorError "></span>
+            <br>
+            <br>
+            <p class="color"><input type="checkbox" name="terms" required> I accept the <u>Terms and Conditions</u></p>
+            <br>
+            <br>
+            <input class="button button1" type="submit" value="Submit">
+            <span id="invalid" class="color colorError "></span>
+
+        </fieldset>
+    </form>
+
+    <br>
+    <br>
+    <br>
+</body>
+<script>
+    function CheckPass() {
+        var pass1 = document.getElementById("pass").value;
+        var pass2 = document.getElementById("ConfirmPass").value;
+        if (pass1 != pass2) {
+            document.getElementById("invalidPass").innerHTML = "Password and Repeat password should be the same";
+            document.getElementById("ConfirmPass").style.backgroundColor = "rgb(212, 154, 212)";
+            return false;
+        }
+        else {
+            document.getElementById("invalidPass").innerHTML = "";
+            document.getElementById("ConfirmPass").style.backgroundColor = "white";
+            return true;
+
+        }
+
+    }
+    function buttonSubmit(ev) {
+
+        if (CheckPass()) {
+            ev.target.submit();
+            var win;
+            win = window.open('', '_blank');
+            win.document.write("<h1> Thank you, " + document.getElementById("fname").value + " for registering in our website" + "</h2>");
+            document.getElementById("invalid").innerHTML = "";
+
+        }
+        else {
+            ev.preventDefault();
+            document.getElementById("invalid").innerHTML = "Please correct the validation errors first";
+
+        }
+
+
+    }
+
+</script>
+
+</html>
