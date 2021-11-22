@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Contact Us</title>
+    <style>
+        .button {
+            background-color: #eeeeee;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: white;
+            color: rgb(143, 25, 143);
+            border: 2px solid rgb(143, 25, 143);
+        }
+
+        .button1:hover {
+            background-color: rgb(143, 25, 143);
+            color: white;
+        }
+
+        .form-box {
+            width: 40%;
+            height: 100%;
+            margin-top: 100px;
+            background-color: white;
+            border-radius: 20px;
+            display: inline-block;
+            border: none;
+            background-color: rgb(143, 25, 143);
+            /*    background-image: url('backgroundForm.jpg'); */
+
+        }
+
+        .color {
+            color: white;
+            font-size: larger;
+            font-style: initial;
+
+        }
+
+        .colorError {
+            font-size: small;
+            border: 5px;
+            background-color: white;
+            color: rgb(143, 25, 143);
+            ;
+
+
+        }
+    </style>
+</head>
+
+<body style="background-image: url('background.jpg');background-repeat: no-repeat ; text-align: center;">
+    <form class="form-box" action="Thankyou.html" method="get">
+        <legend style="font-style:initial; font-size: larger; border: none; color: white;">Contact Us</legend>
+        <div>
+            <label for="fname" class="color">Enter Your Name:</label>
+            <input type="text" id="fname" name="fullname" minlength="4"placeholder="Enter Your Name Please" style="width: 250px;"
+                required>
+        </div>
+        <br>
+        <div class="color">
+            <label for="phone">Enter your phone number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}[0-9]{5}[0-9]{3}" required>
+        </div>
+        <br>
+        <div>
+            <label for="country" class="color">City</label >
+            <select id="country" name="country" style="width: 250px;" required>
+                <option value="Egypt">Egypt</option> 
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+                <option value="india">India</option>
+                <option value="russia">Russia</option>
+                <option value="mexico">Mexico</option>
+                <option value="Japan">Japan</option>
+                <option value="Philippines">Philippines</option>
+                <option value="DR Congo">DR Congo</option>
+
+            </select>
+        </div>
+        <br>
+        <div class="color">
+            <label for="opinion">Your opinion on the website:</label>
+            <input type="radio" id="VeryGood" name="opinion" value="VeryGood" required>
+            <label for="VeryGood">Very Good</label>
+            <input type="radio" id="Good" name="opinion" value="Good" required>
+            <label for="Good">Good</label>
+            <input type="radio" id="Fair" name="opinion" value="Fair" required>
+            <label for="Fair">Fair</label>
+        </div>
+        <br>
+        <div class="color">
+            <label for="Gender">Gender:</label>
+            <input type="radio" id="Female" name="Gender" value="Female" required>
+            <label for="Female">Female</label>
+            <input type="radio" id="Male" name="Gender" value="Male" required>
+            <label for="Male">Male</label>
+        </div>
+        <br>
+        <div class="color">
+            <label for="Maritalstatus">Marital status:</label>
+            <select name="Maritalstatus" id="Maritalstatus" required>
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+                <option value="Other" selected>Other</option>
+            </select>
+        </div>
+        <br> 
+        <div class="color">
+            <label for="website">You know about my website from:</label> <br>
+            <select name="website" id="website" multiple required>
+                <option value="Internet">Internet</option>
+                <option value="Friend">Friend</option>
+                <option value="Search Engine">Search Engine</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <br>
+        <div class="color">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter Your Email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" aria-required="true"><br> <br>
+            <label for="Subject">Subject:</label>
+            <input type="text" id="Subject" name="Subject" required placeholder="Enter Subject" aria-required="true"><br> <br>
+            <label for="Message">Message:</label>
+            <textarea cols="40" rows="5" id="Message" name="Message" aria-required="true"> Enter Your Comment Please:  </textarea>
+        </div>
+        <br>
+        <div class ="color">
+            <label for="file">Choose file to upload</label>
+            <input type="file" id="file" name="file" accept="image/*,.pdf" multiple>
+          </div>
+          <br>
+        <div >
+            <input type="submit" class="button button1" value="Submit">
+            <input type="RESET" class="button button1" value="CLEAR!">
+        </div>
+        <br>
+     
+    
+        </fieldset>
+    </form>
+
+    <br>
+    <br>
+</body>
+
+</html>
