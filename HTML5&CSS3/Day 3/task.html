@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=4, initial-scale=1.0">
+    <title>Task 3</title>
+
+    <style>
+        #div1,
+        #div2 {
+            float: left;
+            width: 500px;
+            height: 300px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        #d1 {
+            border-radius: 15px 50px;
+            background: #5fcece;
+            column-count: 3;
+            column-gap: 80px;
+            column-rule-style: solid;
+            column-rule-width: 1px;
+        }
+
+        @font-face {
+            font-family: myFirstFont;
+            src: url(Estonia-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: myFirstFont;
+            src: url(Estonia-Regular.ttf);
+            font-weight: bold;
+        }
+
+        * {
+            font-family: myFirstFont;
+            font-size: 50px;
+        }
+
+        #d2 {
+            border-radius: 50px 50px;
+            background: #5fcece;
+            width: 200px;
+            height: 100px;
+            background-color: #5fcece;
+            transform: rotate(90deg);
+            text-align: center;
+
+        }
+
+        #im1 {
+            width: "250";
+            height: "250";
+            transition-property: width, height;
+            transition: transform .7s ease-in-out
+        }
+
+        #im1:hover {
+
+            transform: rotate(360deg);
+            width: 400px;
+            height: 400px;
+
+        }
+
+        #im2 {
+            width: 100px;
+            height: 100px;
+            animation: im2 5s infinite;
+            position: relative;
+            text-align: center;
+        }
+
+        @keyframes im2 {
+            0% {
+                top: 0px;
+                left: 50px;
+                width: 200px;
+                height: 200px;
+                transform: rotate(90deg);
+            }
+
+            25% {
+                top: 0px;
+                left: 200px;
+                width: 250px;
+                height: 250px;
+                transform: rotate(90deg);
+            }
+
+            50% {
+                top: 100px;
+                left: 200px;
+                width: 300px;
+                height: 300px;
+                transform: rotate(180deg);
+
+            }
+
+            75% {
+                top: 100px;
+                left: 0px;
+                width: 350px;
+                height: 350px;
+                transform: rotate(270deg);
+            }
+
+            100% {
+                top: 0px;
+                left: 0px;
+                width: 400px;
+                height: 400px;
+                transform: rotate(360deg);
+
+            }
+
+
+        }
+    </style>
+    <script>
+    function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+    </script>
+</head>
+
+<body style="background-color:whitesmoke; text-align: center;">
+    <div id="d1">
+        <p>
+            I'm a computer science fresh graduate . I am a passionate individual,
+            self-motivated, fast learner and hard worker who likes to be challenged in order to develop new and
+            innovative approaches.
+            Furthermore,an ambitious person interested in new experiences, new technologies.
+        </p>
+    </div>
+    <br>
+    <br>
+    <div id="d2">
+        Alaa Farouk
+    </div>
+    <br>
+    <br>
+    <img src="img1.jpg" alt="Crying girl" id="im1" width="250" height="250">
+    <br>
+    <br>
+    <img src="img2.png" id="im2" alt="Crying girl" width="100" height="100">
+    <br>
+    <br>
+    <br>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="img3.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="400" height="300">
+    </div>
+
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</body>
+
+</html>

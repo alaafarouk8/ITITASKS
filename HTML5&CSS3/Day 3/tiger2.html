@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiger 2</title>
+    <style>
+        #tiger-container {
+            width: 100%;
+        }
+
+        #tiger {
+            position: relative;
+            left: 0;
+            animation-direction: normal;
+            animation-iteration-count: infinite;
+            animation-name: tigerr;
+            animation-duration: 4s;
+
+        }
+
+        @keyframes tigerr {
+            0% {
+                left: 0%;
+                transform: rotateY(180deg);
+            }
+            50%
+            {
+                left: 100%;
+                transform: rotateY(360deg);
+            }
+            100%
+            {
+                left: 0;
+                transform: rotateY(360deg);
+            }
+
+          
+        }
+    </style>
+</head>
+
+<body>
+    <img src="tiger.gif" id="tiger" alt="Tiger" width="100" height="100">
+
+</body>
+
+</html>

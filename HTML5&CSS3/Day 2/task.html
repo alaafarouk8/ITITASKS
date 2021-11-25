@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <style>
+        .button {
+            background-color: #eeeeee;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: white;
+            color: rgb(25, 143, 143);
+            border: 2px solid rgb(25, 143, 143);
+        }
+
+        .button1:hover {
+            background-color: rgb(25, 143, 143);
+            color: white;
+        }
+    </style>
+    <script>
+        var canvas, context;
+        function draw() {
+            canvas = document.getElementById("myCanvas");
+
+            context = canvas.getContext("2d");
+
+            var img = new Image();
+            img.src = "sadface.jpg";
+            img.onload = function () {
+                context.drawImage(img, 0, 0);
+
+            }
+        }
+       
+    </script>
+</head>
+
+<body onload="draw() , onload=drawPolygon()"
+    style="background-image: url('16-bit-wallpaper-1.jpg'); text-align: center;">
+
+    <!-- Q1 -->
+    <video width="520" height="440" controls>
+        <source src="Santa_Claus.mp4" type="video/mp4">
+    </video>
+    <!--  Bonus Q5 -->
+    <br>
+    <input type="button" id="getLocationButton" class="button button1" value="Get Location" />
+    <br>
+    <!-- Q2 with Bonus Question -->
+    <svg height="100" width="100">
+        <defs>
+            <linearGradient id="grad0" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:rgb(255, 81, 0);stop-opacity:1" />
+                <stop offset="100%" style="stop-color:rgb(160, 4, 4);stop-opacity:1" />
+            </linearGradient>
+        </defs>
+        <circle cx="50" cy="50" r="40" stroke="blue" fill="url(#grad0)" stroke-width="3" fill="#7067CF" id="svgID" />
+    </svg>
+    <br>
+    <!-- Q3 -->
+    <canvas id="myCanvas" width="450" height="450" style="border:1px solid #000000;">
+    </canvas>
+    <br>
+    <!--Q4-->
+    <svg height="200" width="200">
+        <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:rgb(0, 183, 255);stop-opacity:1" />
+                <stop offset="100%" style="stop-color:rgb(17, 0, 255);stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:rgb(255, 51, 0);stop-opacity:1" />
+                <stop offset="100%" style="stop-color:rgba(175, 87, 91, 0.329);stop-opacity:1" />
+            </linearGradient>
+        </defs>
+        <circle cx="100" cy="70" r="70" fill="url(#grad1)" />
+        <text fill="url(#grad2)" font-size="50" font-family="Verdana" x="50" y="86">Alaa</text>
+    </svg>
+    <br>
+
+    <!--Q5-->
+    <svg   width="676" height="676">
+       
+        <circle cx="311.68289" cy="324.64092" r="164.20902" fill="#2f2e41" />
+        <circle cx="325.20044" cy="382.71266" r="99.44441" fill="#ffe5d9" />
+        <path d="M814.27,685.31l-.12.03-23.13,5.55-48.16,11.56-6.57,1.58L663.05,721.6l-6.22,1.5L479.14,
+       765.74a333.63858,333.63858,0,0,1-35.15-15.83c-.11-.06-.23-.12-.34-.18-.65-.34-1.29-.67-1.93-1.02q-2.115-1.11-4.21-2.26-11.925-6.55507-23.24-14.02-2.91-1.905-5.76-3.87c-.61-.42-1.21-.84-1.81-1.26-.63-.44-1.26-.88-1.88-1.32q-2.475-1.755-4.92-3.55c17.26-31.37,
+       58.36-52.22,99.46-63.63,31.02-8.62,37.84-36.95,37.25-62.16a146.9523,146.9523,0,0,0-1.46-17.18,167.47773,
+       167.47773,0,0,0-5.96-26.74l99.45,3.32,10.26,23.64a53.49156,53.49156,0,0,0-.27,7.82c.78,19.39,12.75,31.93,
+       27.52,40.02,1.92,1.05005,3.89,2.03,5.89,2.94,24.22,11.01,52.73,11.76,52.73,11.76a101.52,101.52,0,0,1,
+       26.09.49q3.15.48,6.12,1.15A88.13944,88.13944,0,0,1,789.09,658.23a91.60126,91.60126,0,0,1,10.41,8.63A82.67563,
+       82.67563,0,0,1,814.27,685.31Z" transform="translate(-262 -112)" fill="#ffe5d9" />
+        <path
+            d="M829.19,698.42c-.42.39-.84.77-1.26,1.16a337.81887,337.81887,0,0,1-27.65,22.7q-9.675,7.155-19.86,13.59-2.235,1.425-4.5,2.8-3.93,2.4-7.93,4.69-5.22,3-10.57,5.81c-1.44.77-2.88995,1.51-4.34,2.25-2.12,1.09-4.25,2.14-6.4,3.17-.37.18-.74.36-1.11.53l-4.23-3.51,49.68-60.72,9.99-12.21s3.99,0,13.14,6.66a130.9934,130.9934,0,0,1,14.3,12.34C828.69,697.93,828.94,698.17,829.19,698.42Z"
+            transform="translate(-262 -112)" fill="#d0cde1" />
+        <path
+            d="M828.49,697.74a11.39223,11.39223,0,0,1-.56,1.84,337.81887,337.81887,0,0,1-27.65,22.7,117.95015,117.95015,0,0,1-25.79,6.13s.75,3.76,1.43,10.26q-3.93,2.4-7.93,4.69-5.22,3-10.57,5.81c-1.44.77-2.88995,1.51-4.34,2.25-2.12,1.09-4.25,2.14-6.4,3.17-.37.18-.74.36-1.11.53-1.4.68-2.82,1.34-4.24,2a334.89638,334.89638,0,0,1-57.46,20.39c-.11.03-.21.05-.32.08-1.29.33-2.59.65-3.89.96-.97.24-1.95.47-2.93.69a2.48782,2.48782,0,0,1-.37.09c-2.01.47-4.02.92-6.05,1.33-1.14.24-2.28.48-3.42.71-.69.15-1.39.28-2.08.41-.87.17-1.73.33-2.6.5-.48.1-.96.18-1.45.26-1.1.2-2.2.4-3.29.59-1.86.32-3.74.63-5.61.91-1.36.21-2.71.41-4.07.6-1.6.23-3.2.44-4.81.64-.44.07-.88.12-1.32.17q-.85491.10492-1.71.21c-1.15.14-2.3.27-3.46.39-.6.07-1.19.13-1.79.19q-1.71.18-3.42.33c-1.47.13995-2.94.26-4.42.38-1.8.14-3.59.27-5.4.38-1.16.07-2.32.14-3.49.2-2.98.16-5.96.27-8.96.35-1.49.04-2.99.07-4.49.09h-.03c-1.49.02-2.99.03-4.49.03a339.151,339.151,0,0,1-45.45-3.04q-16.575-2.22-32.62-6.02c-.43-.1-.86-.2-1.28-.31-1.08-.25-2.15-.52-3.22-.79-.95-.24-1.89-.49-2.84-.74a335.35735,335.35735,0,0,1-70.6-27.19c-.11-.06-.23-.12-.34-.18-.65-.34-1.29-.67-1.93-1.02,54.89-12.79,141.63-32.96,216.9-50.24q3.165-.72,6.29-1.44c27.8-6.38,53.84-12.32,75.87006-17.29q3.42-.765,6.69995-1.5c23.67-5.32,42.05005-9.36,52.02-11.38a81.48836,81.48836,0,0,1,8.14-1.43l20.81,32.25Z"
+            transform="translate(-262 -112)" fill="#2f2e41" />
+        <circle cx="161.4491" cy="205.85142" r="48.91333" fill="#2f2e41" />
+        <circle cx="461.91668" cy="191.87618" r="48.91333" fill="#2f2e41" />
+        <path
+            d="M573.68289,359.77712c-57.88732,0-104.81427,27.37407-104.81427,61.14166,0,15.10906,9.43269,28.91775,25.003,39.58556l20.1779-14.62031-5.48723,22.90446c2.27682,1.05513,4.60162,2.07636,7.02643,3.02019l30.1437-35.16776v43.20369a175.95757,175.95757,0,0,0,27.95047,2.21583c57.88732,0,104.81427-27.37407,104.81427-61.14166S631.57021,359.77712,573.68289,359.77712Z"
+            transform="translate(-262 -112)" fill="#2f2e41" />
+        <path d="M468.86862,310.23519s17.469,39.06051-34.93809,56.52955Z" transform="translate(-262 -112)"
+            fill="#2f2e41" />
+        <ellipse cx="489.41344" cy="514.60154" rx="8.28703" ry="19.88888"
+            transform="translate(-382.60837 38.98959) rotate(-15.63946)" fill="#fec5bb" />
+        <ellipse cx="688.30226" cy="498.02747" rx="19.88888" ry="8.28703"
+            transform="translate(-113.09381 1042.41397) rotate(-86.47577)" fill="#fec5bb" />
+    </svg>
+    <script>
+        var buttonSVG = document.getElementById("svgID");
+        buttonSVG.onmouseover = function () {
+            buttonSVG.style.fill = "url(#grad1)";
+            buttonSVG.style.stroke = "pink";
+
+        }
+        buttonSVG.onmousedown = function () {
+            buttonSVG.style.fill = "url(#grad2)";
+            buttonSVG.style.stroke = "yellow";
+
+        }
+        buttonSVG.onmouseup = function () {
+            alert("HEEEEEEEEEEEEEEEEEEEEEY");
+        }
+
+        var canvas, context;
+        canvas = document.getElementById("myCanvas");
+        context = canvas.getContext("2d");
+        canvas.onmousedown = function () {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            var img = new Image();
+            img.src = "smileface.png";
+            img.onload = function () {
+                context.drawImage(img, 0, 0);
+
+            }
+        }
+        canvas.onmouseup = function () {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            var img = new Image();
+            img.src = "sadface.jpg";
+            img.onload = function () {
+                context.drawImage(img, 0, 0);
+            }
+        }
+        document.getElementById("getLocationButton").onclick = function () {
+            navigator.geolocation.getCurrentPosition(showPosition);
+            //The getCurrentPosition() method returns an object if it is successful. 
+            //The latitude, longitude and accuracy properties are always returned. 
+            //The other properties below are returned if available.
+        }
+
+        function showPosition(position) {
+            var url = "http://maps.google.com/maps?q=" + position.coords.latitude + ",+" + position.coords.longitude;
+            window.open(url);
+        }
+
+    </script>
+</body>
+
+</html>
