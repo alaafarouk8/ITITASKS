@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>Box Animator</title>
+	<style type="text/css">
+		.box {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="js/box-animator.js"></script>
+</head>
+
+<body>
+	<div class="box"></div>
+</body>
+<script>
+	$(document).ready(function () {
+		var box = $(".box");
+		box.animate({
+			left: '500',
+			height: '300px',
+			width: '300px'
+		}, "slow", function () {
+			$(this).css('background', 'blue');
+		});
+		box.animate({
+			bottom: '100px',
+			height: '100px',
+			width: '100px'
+		}, "slow", function () {
+			$(this).css('background', 'yellow');
+		});
+		box.animate({
+			left: '0',
+			height: '300px',
+			width: '300px'
+		}, "slow", function () {
+			$(this).css('background', 'green');
+		});
+		box.animate({
+			top: '0',
+			height: '100px',
+			width: '100px'
+		}, "slow", function () {
+			$(this).css('background', 'blue');
+		});
+	});
+
+</script>
+
+</html>

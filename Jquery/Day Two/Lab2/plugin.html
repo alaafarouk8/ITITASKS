@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <title>Plugin</title>
+</head>
+
+<body>
+    <p>
+        Fear arises with man since the beginning of his consciousness as a small child. It is one of the psychological
+        cases that indicate the human awareness of the surrounding risks to avoid them.
+
+        But there is a kind of fear that reaches the stage of mental illness, it is like obsessive-compulsive disorder,
+        for example: Fear of illness, fear of death, and other examples that make negative thoughts dominate the
+        thinking of their owner.
+
+        Here the problem must be addressed before it gets worse and needs medical intervention and the patient is given
+        certain types of medication.
+    </p>
+
+
+</body>
+<script>
+    jQuery.fn.myFunction = function (color) {
+        color = color||"red" ;
+        this.css("color",color);
+        return this;
+    };
+    $("p").myFunction("blue");
+    
+</script>
+
+</html>

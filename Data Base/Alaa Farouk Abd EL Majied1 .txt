@@ -1,0 +1,28 @@
+1-
+Table - Musician( (Musician_ID PK), name , phone , city , st)
+Table - Instrument( (Ins_name PK) , key)
+Table - Mus_Ins( (Musician_ID Fk , Ins_name FK) PK)
+Table - Song (( title PK) , Author , (Album_ID FK) )
+Table - Album ( (Album_ID PK) ,(Musician_ID FK) , Date , Title)
+Table - Mus_Song ((title FK , Musician_ID FK) PK )
+
+
+2- 
+Table - Sales_Office ( (Num PK) , loc , (Employee_ID Fk))
+Table - Employee ( (Employee_ID PK ) , name , (num_sales_office FK) )
+Table - Property ( (Property_ID PK) , add , cityb , state , zip , (num_sales_office FK))
+Table - Owner ( (Owner_ID PK) , name ) 
+Tale - Pro_Owner ( (Property_ID FK , Owner_ID FK ) PK , Percent-owned) 
+
+
+3-
+
+Table - Patient ( (Patient_ID PK) , name , DOM , ( Ward_ID FK) , (Consultant_ID FK) )
+Table - Ward (( Ward_ID PK ) , name , (nurse_ID FK) ) 
+Table - Nurse ( (nurse_ID PK ) , name , ( Ward_ID FK) )
+Table - Drug ( (Code PK) ,RecDosage)
+Table - Patient_Drug ((Patient_ID FK , nurse_ID FK , Code_ID FK) PK , Date , time , Dosage)
+Table - Consultant ( (Consultant_ID PK) , name)
+Table - Pat_Con ((Patient_ID FK , Consultant_ID FK) PK ) 
+Table - Brand ( (Code FK , Brand) PK)
+

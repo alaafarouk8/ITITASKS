@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        ////////////////////////////////////////////Q 1/////////////////////////////////////////////////////
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+        document.write("<h3> Numbers </h3>");
+        document.write(numbers + "<br>");
+        /////////////////////// a ////////////////////////////
+        document.write("<h3> <br> <hr> </br> </h3>");
+        document.write("<h3> Odd Numbers </h3>");
+        let odds = numbers.filter(n => n % 2 != 0)
+        document.write("Odd numbers:" + odds + "<br>");
+        /////////////////////// b ////////////////////////////
+        document.write("<h3> <br> <hr> </br> </h3>");
+
+        document.write("<h3> Even Numbers </h3>");
+        let getEvenNumbers = (numbers) => {
+            if (numbers % 2 === 0) {
+                document.writeln(numbers);
+            }
+        }
+        numbers.forEach(getEvenNumbers);
+        ////////////////////// c ///////////////////////////
+        document.write("<h3> <br> <hr> </br> </h3>");
+
+        document.write("<h3> Squares Numbers </h3>");
+        let squares = numbers.map(n => n ** 2);
+        document.write("Square numbers:" + squares + "<br>");
+        ////////////////////// d ////////////////////////////
+        document.write("<h3> <br> <hr> </br> </h3>");
+
+        var name ="alaa";
+        let test = {
+            name: "aya",
+            newname: ()=>{
+                document.write("<h3> D - This With Arrow Function </h3>");
+                document.write(` hello ${this.name}` +"arrow function can be just anonymous function so we cant got the name object context");
+           },
+           literalname: function(){
+            document.write("<h3> D - This Without Arrow Function </h3>");
+                document.write(` hello ${this.name}` + " this without arrow function -> this refer to the name object context");
+           }
+        }
+        test.newname();
+        test.literalname() ;
+
+        //////////////////////////////////////////////Q 2////////////////////////////////////////////////////////
+        document.write("<h3> <br> <hr> </br> </h3>");
+
+        document.write("<h3> for in </h3>");
+        for (var x in numbers) {
+            document.writeln(x);
+        }
+        ////////////////////////////////////////////////////
+        document.write("<h3> for of </h3>");
+        for (var x of numbers) {
+            document.writeln(x);
+        }
+        ///////////////////////////////////////////////////
+        document.write("<h3> for each </h3>");
+        numbers.forEach((x) => {
+            document.writeln(x);
+        });
+        /////////////////////////////////////////////////
+
+        document.write("<h3> Q2 the difference between them : </h3>");
+         document.write ("<p> forEach is an Array method that we can use to execute a function on each element in an array. It can only be used on Arrays, Maps, and Sets.</p>")
+         document.write ("<p> for...in is used to iterate over the enumerable properties of objects. Every property in an object will have an Enumerable value — if that value is set to true, then the property is Enumerable.</p>")
+         document.write ("<p> The for...of statement creates a loop iterating over iterable objects, including: built-in String, Array, array-like objects, TypedArray, Map, Set, and user-defined iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object.</p>")
+
+        ////////////////////////////////////////////////Q 4 ///////////////////////////////////////////////////////
+        const studentObject = [
+            {
+                Std_name: "ali",
+                Uni_name: "Cairo University",
+                fac_name: "Fci",
+                grad: "good"
+
+            },
+            {
+                Std_name: "ahmed",
+                Uni_name: "Cairo University",
+                fac_name: "Fci",
+                grad: "very good"
+
+            },
+            {
+                Std_name: "ahmed",
+                Uni_name: "Cairo University",
+                fac_name: "Fci",
+                grad: "excellent"
+
+            }
+        ]
+        // to print the data of the object
+        for (var i = 0; i < studentObject.length; i++) {
+            console.log(studentObject[i].Std_name + " is a student in faculty of " + studentObject[i].fac_name + " in university " + studentObject[i].Uni_name + " And his final grad is " + studentObject[i].grad);
+        }
+        
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Box Generator</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+		div {
+			width: 100px;
+			height: 100px;
+		}
+
+		.red {
+			background-color: red;
+		}
+
+		.blue {
+			background-color: blue;
+
+		}
+
+		.green {
+			background-color: green;
+
+		}
+
+		.orange {
+			background-color: orange;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="red"></div>
+</body>
+<script>
+	$(document).ready(function () {
+		var currentdiv;
+		var currenthover;
+		var i = 1;
+		var red = $(".red");
+		red.hover(function () {
+			$(this).css("background-color", "blue");
+		}, function () {
+			$(this).css("background-color", "red");
+		});
+		var colors = ["red", "blue", "yellow", "green"];
+		red.on("click", function () {
+			currentdiv = $(`<div class=${colors[i]}></div>`).appendTo("body");
+			currentdiv.hover(function () {
+				$(this).css("background-color", "yellow");
+			}, function () {
+				$(this).css("background-color", "blue");
+			});
+			let nextdiv;
+			currentdiv.on("click", function () {
+				nextdiv = $(`<div class=${colors[2]}></div>`).appendTo("body");
+				nextdiv.hover(function () {
+					$(this).css("background-color", "green");
+				}, function () {
+					$(this).css("background-color", "yellow");
+				});
+				let nextdiv2;
+				nextdiv.on("click", function () {
+					nextdiv2 = $(`<div class=${colors[3]}></div>`).appendTo("body");
+					nextdiv2.hover(function () {
+						$(this).css("background-color", "red");
+					}, function () {
+						$(this).css("background-color", "green");
+					});
+
+
+				});
+
+			});
+
+		});
+	}
+	);
+
+</script>
+
+</html>

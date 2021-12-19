@@ -1,0 +1,50 @@
+Name : Alaa Farouk Abd El Majied 
+-----------------------------------------------------------------
+Normalization  
+1- 
+NF1
+Dept [Dept PK , Deptname, location, mgrname, mgrID, telextn]
+Cust [(Dept FK,Cust FK) PK ,custname, dateofcomplaint, natureofcomplaint]
+
+
+From NF1 To NF2
+Dept [Dept PK , Deptname, location, mgrname, mgrID, telextn]
+Cust_Comp [(Dept FK,Cust FK) PK , dateofcomplaint, natureofcomplaint]
+Custmers [Cust PK , custname ]
+
+From NF2 to NF3
+Cust_Comp [Dept PK , Cust PK, dateofcomplaint, natureofcomplaint ]
+Dept  [Dept PK , Deptname, location, mgrID, telextn]
+Custmers [Cust PK , custname ]
+Manager [mgrID PK , mgrname]
+
+2-
+NF1
+Employee [ emp-no PK ,emp-name , dept ,dept-manager] 
+Emp_Project [(proj-id FK , emp-no FK)PK,  proj-start-date , location , weeks-on ]
+
+NF2
+Employee [ emp-no PK ,emp-name , dept ,dept-manager] 
+Emp_Project [(proj-id FK , emp-no FK)PK , location , weeks-on ]
+Project(proj-id PK , proj-start-date) 
+
+NF3
+Employee [ emp-no PK ,emp-name , dept] 
+department(dept PK, manager) 
+Emp_Project [(proj-id FK , emp-no FK)PK , location , weeks-on ]
+Project(proj-id PK , proj-start-date) 
+
+
+------------------------------------------------------ SQL --------------------------------------------------------------
+
+1- select * from employees where first_name LIKE '%m%'
+2- select * from employees where salary > 60000
+3- select * from student_course where grade > 70 
+4- select distinct salary from employees order by salary DESC limit 2 
+5- select * from employees salary > 100000 and department_No = 7 
+6- select * from employees where salary is not Null and bonus is Null 
+7- select * from employees where title is Null 
+8- select * from courses where corse_duration > 70 
+9- select min(grade) from courses where course_name = 'PHP' 
+
+
